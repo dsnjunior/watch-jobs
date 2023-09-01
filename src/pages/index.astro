@@ -1,0 +1,30 @@
+---
+import Global from "@/layouts/global.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+const session = await Astro.locals.auth.validate();
+---
+
+<Global title="dsads">
+  <div class="h-vh flex flex-col items-center justify-center">
+    <h1 class="text-2xl mb-2">Astro</h1>
+    {
+      session ? (
+        <>
+          <p>User id: {session.user.userId}</p>
+          <p>Github username: {session.user.githubUsername}</p>
+          <div hx-boost="true">
+            <a href="/auth/logout" class={cn(buttonVariants(), "mt-4")}>
+              Log out
+            </a>
+          </div>
+        </>
+      ) : (
+        <a href="/auth/github" class={cn(buttonVariants(), "mt-4")}>
+          Login with github
+        </a>
+      )
+    }
+  </div>
+</Global>

@@ -1,0 +1,47 @@
+{
+  "name": "watch-jobs",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate": "drizzle-kit generate:sqlite",
+    "drop": "drizzle-kit drop",
+    "db:push": "drizzle-kit push:sqlite"
+  },
+  "dependencies": {
+    "@astrojs/react": "^3.0.0",
+    "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/vercel": "^4.0.2",
+    "@libsql/client": "^0.3.2",
+    "@lucia-auth/adapter-sqlite": "^2.0.0",
+    "@lucia-auth/oauth": "^3.0.0",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "astro": "^3.0.5",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "drizzle-orm": "^0.28.5",
+    "lucia": "^2.4.1",
+    "lucide-react": "^0.274.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "^3.0.24",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.5.0",
+    "dotenv": "^16.3.1",
+    "drizzle-kit": "^0.19.13",
+    "eslint": "^8.48.0",
+    "eslint-plugin-astro": "^0.29.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0"
+  }
+}
